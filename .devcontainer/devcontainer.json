@@ -6,8 +6,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-dotnettools.csharp",
-				"GitHub.copilot"
+				"ms-dotnettools.csharp"
 			]
 		}
 	}
