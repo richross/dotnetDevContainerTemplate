@@ -13,6 +13,10 @@ jobs:
       - name: Initial Checkout
         uses: actions/checkout@v3
       
+      - name: runner location
+        run: |
+          ls
+      
       - name: Login to GitHub Container Reg
         uses: docker/login-action@v1
         with:
