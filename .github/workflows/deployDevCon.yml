@@ -23,7 +23,7 @@ jobs:
       - name: Download devcontainer/cli
         run: |
           ls
-          npm install -g @devcontainer/cli
+          npm install -g @devcontainers/cli
           devcontainer build .
 
       # - name: Use devcon cli to build container
