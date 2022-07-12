@@ -21,10 +21,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
             
       - name: Download devcontainer/cli
-        uses: npm install -g @devcontainer/cli
+        uses: echo 'npm install -g @devcontainer/cli'
 
       - name: build the dev container
-        uses: devcontainer build .
+        uses: echo 'devcontainer build .'
 
       # - name: Use devcon cli to build container
       #   uses: devcontainers/ci@v0.2
