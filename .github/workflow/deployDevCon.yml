@@ -1,0 +1,16 @@
+name: deployDevCon
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Initial Checkout
+        uses: actions/checkout@v3
+      - name: Use devcon cli to build container
+        uses: devcontainers/ci@v0.2
+        with:
+          make ci-build
