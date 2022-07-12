@@ -23,6 +23,6 @@ jobs:
       - name: Use devcon cli to build container
         uses: devcontainers/ci@v0.2
         with:
-          imageName: 'ghcr.io/dotnet/testing/sdk:6.0'
+          imageName: 'ghcr.io/richross/dotnet/sdk6'
           imageTag: 'latest'
           runCmd: 'make ci-build'
