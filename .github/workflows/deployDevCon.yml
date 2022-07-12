@@ -15,4 +15,5 @@ jobs:
       - name: Use devcon cli to build container
         uses: devcontainers/ci@v0.2
         with:
+          imageName: 'mcr.microsoft.com/dotnet/nightly/sdk:6.0'
           runCmd: 'make ci-build'
