@@ -25,4 +25,3 @@ jobs:
         with:
           imageName: 'ghcr.io/richross/dotnet/sdk6'
           imageTag: 'latest'
-          runCmd: 'make ci-build'
