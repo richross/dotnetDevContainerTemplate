@@ -25,4 +25,6 @@ jobs:
         with:
           imageName: 'ghcr.io/richross/dotnet/sdk6'
           imageTag: 'latest'
-          runCmd: 'dotnet --version'
+          runCmd: |
+            dotnet --version
+            ls
