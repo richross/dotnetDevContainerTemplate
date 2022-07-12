@@ -15,4 +15,4 @@ jobs:
       - name: Use devcon cli to build container
         uses: devcontainers/ci@v0.2
         with:
-          make ci-build
+          runCmd: 'make ci-build'
