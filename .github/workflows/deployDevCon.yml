@@ -12,6 +12,14 @@ jobs:
     steps:
       - name: Initial Checkout
         uses: actions/checkout@v3
+      
+      - name: Login to GitHub Container Reg
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ github.GITHUB_TOKEN }}
+
       - name: Use devcon cli to build container
         uses: devcontainers/ci@v0.2
         with:
