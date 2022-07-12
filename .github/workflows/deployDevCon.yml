@@ -19,12 +19,18 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
+            
+      - name: Download devcontainer/cli
+        uses: npm install -g @devcontainer/cli
 
-      - name: Use devcon cli to build container
-        uses: devcontainers/ci@v0.2
-        with:
-          imageName: 'ghcr.io/richross/dotnet/sdk6'
-          imageTag: 'latest'
-          runCmd: |
-            dotnet --version
-            ls
+      - name: build the dev container
+        uses: devcontainer build .
+
+      # - name: Use devcon cli to build container
+      #   uses: devcontainers/ci@v0.2
+      #   with:
+      #     imageName: 'ghcr.io/richross/dotnet/sdk6'
+      #     imageTag: 'latest'
+      #     runCmd: |
+      #       dotnet --version
+      #       ls
